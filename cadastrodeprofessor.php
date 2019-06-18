@@ -64,6 +64,7 @@
             <label for="telefone">Telefone:</label>
             <input type="text" id="telefone" name="telefone"><br>
             - Informações Acadêmicas<br>
+            <label for="formacao"> Formação:</label> <br>
             <input type="text" id ="formacao" name="formacao"><br>
             <label for="titulacao"> Titulação:</label><br>
             <select name=titulacao id="select">

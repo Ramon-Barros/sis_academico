@@ -9,9 +9,11 @@ $bairro = filter_input(INPUT_POST, 'bairro', FILTER_SANITIZE_STRING);
 $cidade = filter_input(INPUT_POST, 'cidade', FILTER_SANITIZE_STRING);
 $estado = filter_input(INPUT_POST, 'estado', FILTER_SANITIZE_STRING);
 $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
+$telefone = filter_input(INPUT_POST, 'formacao', FILTER_SANITIZE_STRING);
+$telefone = filter_input(INPUT_POST, 'titulacao', FILTER_SANITIZE_STRING);
 
 
-$stmt = $conn->prepare("INSERT INTO aluno (cpf, nome, endereco,complemento, cep, bairro, cidade, estado, telefone) VALUES (:CPF, :NOME, :ENDERECO,:COMPLEMENTO, :CEP, :BAIRRO, :CIDADE, :ESTADO, :TELEFONE)");
+$stmt = $conn->prepare("INSERT INTO professor (cpf, nome, endereco,complemento, cep, bairro, cidade, estado, telefone, formacao, titulacao) VALUES (:CPF, :NOME, :ENDERECO,:COMPLEMENTO, :CEP, :BAIRRO, :CIDADE, :ESTADO, :TELEFONE, :FORMACAO, :TITULACAO)");
 
 
 $stmt->bindParam(":NOME", $nome);
@@ -23,6 +25,8 @@ $stmt->bindParam(":BAIRRO", $bairro);
 $stmt->bindParam(":CIDADE", $cidade);
 $stmt->bindParam(":ESTADO", $estado);
 $stmt->bindParam(":TELEFONE", $telefone);
+$stmt->bindParam(":FORMACAO", $telefone);
+$stmt->bindParam(":TITULACAO", $telefone);
 
 
 $result = $stmt->execute();

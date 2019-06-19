@@ -1,5 +1,6 @@
 <?php
 include_once("conexao.php");
+
 $nome = filter_input(INPUT_POST, 'aluno', FILTER_SANITIZE_STRING);
 $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
 $endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_STRING);
@@ -9,11 +10,12 @@ $bairro = filter_input(INPUT_POST, 'bairro', FILTER_SANITIZE_STRING);
 $cidade = filter_input(INPUT_POST, 'cidade', FILTER_SANITIZE_STRING);
 $estado = filter_input(INPUT_POST, 'estado', FILTER_SANITIZE_STRING);
 $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
-$telefone = filter_input(INPUT_POST, 'formacao', FILTER_SANITIZE_STRING);
-$telefone = filter_input(INPUT_POST, 'titulacao', FILTER_SANITIZE_STRING);
+$formacao = filter_input(INPUT_POST, 'formacao', FILTER_SANITIZE_STRING);
+$titulacao = filter_input(INPUT_POST, 'titulacao', FILTER_SANITIZE_STRING);
 
 
-$stmt = $conn->prepare("INSERT INTO professor (cpf, nome, endereco,complemento, cep, bairro, cidade, estado, telefone, formacao, titulacao) VALUES (:CPF, :NOME, :ENDERECO,:COMPLEMENTO, :CEP, :BAIRRO, :CIDADE, :ESTADO, :TELEFONE, :FORMACAO, :TITULACAO)");
+$stmt = $conn->prepare("INSERT INTO professor (cpf, nome, endereco,complemento, cep, bairro, cidade, estado, telefone, formacao, titulacao) 
+VALUES (:CPF, :NOME, :ENDERECO,:COMPLEMENTO, :CEP, :BAIRRO, :CIDADE, :ESTADO, :TELEFONE, :FORMACAO, :TITULACAO)");
 
 
 $stmt->bindParam(":NOME", $nome);
@@ -25,8 +27,8 @@ $stmt->bindParam(":BAIRRO", $bairro);
 $stmt->bindParam(":CIDADE", $cidade);
 $stmt->bindParam(":ESTADO", $estado);
 $stmt->bindParam(":TELEFONE", $telefone);
-$stmt->bindParam(":FORMACAO", $telefone);
-$stmt->bindParam(":TITULACAO", $telefone);
+$stmt->bindParam(":FORMACAO", $formacao);
+$stmt->bindParam(":TITULACAO", $formacao);
 
 
 $result = $stmt->execute();

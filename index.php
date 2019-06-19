@@ -17,5 +17,10 @@
         <li><a class="nav-link active" href="cadastrodocurso.php">Curso</a></li>
         
     </ul>
+
+<h1> Controle Acadêmico</h1>
+
+Bem-vido ao <b> Sistema de Controle Acadêmico.</b> Aqui você poderá consultar suas <i> notas.</i> E também sua <i> frequência. </i> 
+
 </body>
 </html>

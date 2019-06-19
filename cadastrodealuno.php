@@ -31,7 +31,6 @@
             <label for="estado"> Estado:</label>
                 <select name="estado" id="select">
                     <option value=""> Selecione o Estado</option>
-                    <option value=""> Selecione o Estado</option>
                     <option value="ac"> Acre</option>
                     <option value="al"> Alagoas</option>
                     <option value="ap"> Amapá</option>

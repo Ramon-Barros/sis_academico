@@ -25,10 +25,15 @@
                         $stmt = $conn->prepare("SELECT cpf, nome FROM professor");
 
                         $stmt->execute();
-                        
-                        while($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
+                        ?>
 
-                            echo ("<option value='". $linha['cpf']."'>".$linha['nome']."</option>");
+                        <?php 
+                        while($linha = $stmt->fetch(PDO::FETCH_ASSOC)){
+                        ?>
+                        
+                            <option value="<?php echo "{$linha['cpf']}"; ?>"> <?php echo "{$linha['nome']}"; ?> </option>
+
+                            <?php
                         }                        
                                 
                            

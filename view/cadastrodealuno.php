@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadastro de Professor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
+<?php include_once("header.php");?>
+<div style="height: 150px"></div>
+
 <body>
     
-    <p>Prencher os dados do professor(a): </p>
-    <fieldset><legend> Cadastro de professor(a)</legend>
-        <form method="post" action="cadastro_professor.php">
+    <p>Prencher os dados do aluno(a): </p>
+    <fieldset><legend> Cadastro de aluno(a)</legend>
+        <form method="post" action="cadastro_aluno.php">
             <label for="aluno"> Nome:</label>
             <input type="text" id="aluno" name="aluno"><br>
             <label for="cpf"> CPF:</label>
@@ -30,7 +23,6 @@
             <input type="text" id="cidade" name="cidade"><br>
             <label for="estado"> Estado:</label>
                 <select name="estado" id="select">
-                    <option value=""> Selecione o Estado</option>
                     <option value=""> Selecione o Estado</option>
                     <option value="ac"> Acre</option>
                     <option value="al"> Alagoas</option>
@@ -62,22 +54,10 @@
                 </select>
         <br>
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone"><br>
-            - Informações Acadêmicas<br>
-            <label for="formacao"> Formação:</label> <br>
-            <input type="text" id ="formacao" name="formacao"><br>
-            <label for="titulacao"> Titulação:</label><br>
-            <select name=titulacao id="select">
-                <option value="">Selecione a Titulação</option>
-                <option value="graduacao">Graduação</option>
-                <option value="mestrado">Mestrado</option>
-                <option value="doutorado">Doutorado</option>
-                </select>
-                <br>
+            <input type="text" id="telefone" name="telefone"><br> <br>
             <input type="reset" value="Limpar" name="limpar">
             <input type="submit" value="Enviar" name="submit"><br>
         </form>
     </fieldset>
 
 </body>
-</html>

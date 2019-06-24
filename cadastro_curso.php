@@ -10,17 +10,23 @@ $modalidade = filter_input(INPUT_POST, 'modalidade', FILTER_SANITIZE_STRING);
 
 
 $stmt = $conn->prepare("INSERT INTO curso (nome, duracao,coordenador, nivel, modalidade) 
-VALUES (?, ?, ?, ?, ?)");
+VALUES (:NOME, :DURACAO, :COORDENADOR, :NIVEL, :MODALIDADE)");
 
 
-$stmt->bindParam(1, $nome);
-$stmt->bindParam(2, $duracao);
-$stmt->bindParam(3, $coordenador);
-$stmt->bindParam(4, $nivel);
-$stmt->bindParam(5, $modalidade);
+
+$stmt->bindParam(":NOME", $nome);
+
+
+$stmt->bindParam(":DURACAO", $duracao);
+$stmt->bindParam(":COORDENADOR", $coordenador);
+$stmt->bindParam(":NIVEL", $nivel);
+$stmt->bindParam(":MODALIDADE", $modalidade);
 
 $result = $stmt->execute();
 
+
+
+/*
 if($result===true)
 {
     header("LOCATION: index.php");
@@ -28,5 +34,5 @@ if($result===true)
     header("LOCATION: erros.php");
 }
 
-
+*/
 ?>

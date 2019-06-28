@@ -1,3 +1,22 @@
+
+ <section class="contact-section bg-black">
+<div class="container">
+
+          <div class="social d-flex justify-content-center">
+                  <a href="https://twitter.com/ramonburns" class="mx-2">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://github.com/Ramon-Barros" class="mx-2">
+                    <i class="fab fa-github"></i>
+                  </a>
+
+          </div>
+</div>
+</section>
+
 <!-- Footer -->
 <footer class="bg-black small text-center text-white-50">
     <div class="container">

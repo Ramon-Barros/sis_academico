@@ -10,10 +10,10 @@ function(){
     require_once("view/index.php");
 });
 
-$app->get('/OsNoivos.php', 
+$app->get('/cadastrodealuno.php', 
 
 function(){
-    require_once("view/OsNoivos.php");
+    require_once("view/cadastrodealuno.php");
 });
 
 $app->get('/OsNoivos.php', 

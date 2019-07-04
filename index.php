@@ -1,13 +1,69 @@
-<?php include_once("view/header.php");?>
-  
+<?php
 
-<header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-      <div class="mx-auto text-center">
-            <h1> Controle Acadêmico</h1>
-            Bem-vido ao <b> Sistema de Controle Acadêmico.</b> 
-            Aqui você poderá consultar suas <i> notas.</i> E também sua <i> frequência. </i>
-        </div>
-    </div>         
+require_once("vendor/autoload.php");
 
-<?php include_once("view/footer.php");?>
+$app = new \Slim\Slim();
+
+$app->get('/', 
+
+function(){
+    require_once("view/index.php");
+});
+
+$app->get('/OsNoivos.php', 
+
+function(){
+    require_once("view/OsNoivos.php");
+});
+
+$app->get('/OsNoivos.php', 
+
+function(){
+    require_once("view/OsNoivos.php");
+});
+
+$app->get('/cerimonia.php', 
+
+function(){
+    require_once("view/cerimonia.php");
+});
+
+$app->get('/Ospadrinhos.php', 
+
+function(){
+    require_once("view/Ospadrinhos.php");
+});
+
+$app->get('/ListaPresentes.php', 
+
+function(){
+    require_once("view/ListaPresentes.php");
+});
+
+$app->get('/Local.php', 
+
+function(){
+    require_once("view/Local.php");
+});
+
+$app->get('/presente.php', 
+
+function(){
+    require_once("view/presente.php");
+});
+
+$app->get('/certo.php', 
+
+function(){
+    require_once("view/certo.php");
+});
+
+$app->get('/erro.php', 
+
+function(){
+    require_once("view/erro.php");
+});
+
+$app->run();
+
+?>
